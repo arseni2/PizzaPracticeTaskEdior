@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1.ce-header{
+    @apply text-3xl font-bold
+}
+h2.ce-header{
+    @apply text-2xl font-semibold
+}
+h3.ce-header{
+    @apply text-xl font-semibold
+}
+h4.ce-header{
+    @apply text-lg font-semibold
+}
+h5.ce-header{
+    @apply text-base font-semibold
+}
+h6.ce-header{
+    @apply text-base font-semibold
+}
+.image-tool__caption {
+    display: none;
+}
+
+
+.custom-gray-container {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+.custom-container-content {
+    min-height: 40px;
+    outline: none;
+}
+
+/* В режиме редактирования — курсор текста */
+.custom-container-content:focus {
+    outline: 1px solid #ccc;
+}
+
+.codex-editor__redactor {
+    padding-bottom: 0 !important;
+}
