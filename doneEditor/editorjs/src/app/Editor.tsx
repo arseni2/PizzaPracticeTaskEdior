@@ -235,8 +235,8 @@ export const Editor = () => {
     const editorRef = useRef(null);
     const editorInstance = useRef<EditorJS | null>(null);
     const [data, setData] = useState<any>();
-    const savedDataRef = useRef<any>(null); // ← храним данные здесь, не в state
-    const [resultData, setResultData] = useState<any>(null); // ← только для Result
+    const savedDataRef = useRef<any>(null);
+    const [resultData, setResultData] = useState<any>(null);
 
     useEffect(() => {
         if (!editorRef.current) return;
