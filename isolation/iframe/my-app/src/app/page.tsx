@@ -21,7 +21,6 @@ export default function Home() {
                 <p className="projectParagraph">paragraph</p>
             </div>
             <div className="code">
-                {/* Хост-элемент для Shadow DOM */}
                 <iframe sandbox={"allow-same-origin"} srcDoc={response} />
             </div>
         </div>
