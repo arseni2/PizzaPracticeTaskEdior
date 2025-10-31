@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="./main.js"></script>
+    <link rel="stylesheet" href="./light.css"></link>
+    <title>Document</title>
+</head>
+<template id="temp">
+ const data = root.querySelector(".from-cke__details-header");
+console.log("data from template", data);
+data.addEventListener("click", (e) => {
+    console.log("click")
+})
+  
+</template>
+
+<body>
+    <div class="base-button--red">
+        класс base-button--red в lightdom
+    </div>
+    <div class="from-cke__details-text">proejct code</div>
+
+    <wrapper-element>
+      
+    </wrapper-element>
+</body>
+</html>

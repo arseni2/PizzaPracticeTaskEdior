@@ -13,8 +13,8 @@ export const Result = ({ data }: {data: any}) => {
 
         const editor = new EditorJS({
             holder: holderRef.current,
-            readOnly: true, // 🔑 ключевая опция
-            data, // передаём сохранённые данные
+            readOnly: true,
+            data,
             tools: tools(editorRef)
         });
 

@@ -28,6 +28,11 @@ import NestedContainer from "@/plugins/Container";
 export const tools = (editorInstance: any) => ({
     accordion: {
         class: Accordion,
+        config: [
+            {
+                accordion: {class: Accordion}
+            }
+        ]
     },
     header: Header,
     paragraphAligment: Paragraph,
@@ -43,12 +48,12 @@ export const tools = (editorInstance: any) => ({
         class: NestedContainer,
         inlineToolbar: true,
     },
-    linkTool: {
-        class: LinkTool,
-        config: {
-            endpoint: 'http://localhost:8008/fetchUrl',
-        }
-    },
+    // linkTool: {
+    //     class: LinkTool,
+    //     config: {
+    //         endpoint: 'http://localhost:8008/fetchUrl',
+    //     }
+    // },
     nestedchecklist: editorjsNestedChecklist,
     image: {
         class: ImageTool,
@@ -75,6 +80,7 @@ export const tools = (editorInstance: any) => ({
                         const currentNum = parseInt(currentRadius, 10) || 0;
 
                         const value = prompt('Enter border radius in pixels (e.g. 10):', String(currentNum));
+
                         if (value === null || isNaN(Number(value))) return;
 
                         const radius = Math.max(0, Math.min(100, Number(value)));
@@ -92,6 +98,7 @@ export const tools = (editorInstance: any) => ({
                             editor.blocks.update(blockId, blockData.data).then(() => {
                                 // Применяем стиль вручную к DOM
                                 const img = block.holder.querySelector('img');
+                                console.log(img);
                                 if (img) {
                                     img.style.borderRadius = `${radius}px`;
                                 }
